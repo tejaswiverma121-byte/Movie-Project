@@ -30,6 +30,81 @@
       color: var(--text);
       padding-top: 68px;
     }
+    body.light-mode {
+  background-color: #fff0f5;
+  color: #2a0015;
+}
+
+body.light-mode .navbar {
+  background: rgba(255, 240, 245, 0.97) !important;
+  border-bottom: 1px solid rgba(201, 48, 120, 0.2);
+}
+
+body.light-mode .brand-name { color: #2a0015; }
+
+body.light-mode .nav-link { color: #9a4060 !important; }
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active { color: #c93078 !important; }
+
+body.light-mode .search-box {
+  background: #ffe0ee;
+  border-color: rgba(201, 48, 120, 0.25);
+}
+body.light-mode .search-box input { color: #2a0015; }
+body.light-mode .search-box input::placeholder { color: #c090a8; }
+
+body.light-mode .section-title { color: #2a0015; }
+
+body.light-mode .movie-card {
+  background: #fff;
+  border-color: rgba(201, 48, 120, 0.2);
+  box-shadow: 0 2px 12px rgba(201, 48, 120, 0.08);
+}
+
+body.light-mode .card-title { color: #2a0015; }
+body.light-mode .card-year { color: #9a6070; }
+
+body.light-mode .fav-badge { background: rgba(255,255,255,0.85); }
+
+body.light-mode .show-card,
+body.light-mode .reviews-section,
+body.light-mode .summary-card {
+  background: #fff;
+  border-color: rgba(201, 48, 120, 0.2);
+}
+
+body.light-mode .show-body h2 { color: #2a0015; }
+body.light-mode .show-year { color: #9a6070; }
+body.light-mode .show-desc { color: #5a3045; }
+
+body.light-mode .review-card {
+  background: #fff0f5;
+  border-color: rgba(201, 48, 120, 0.15);
+}
+body.light-mode .review-card p { color: #5a3045; }
+
+body.light-mode form {
+  background: #fff;
+  border-color: rgba(201, 48, 120, 0.2);
+}
+body.light-mode .form-control {
+  background: #fff0f5;
+  border-color: rgba(201, 48, 120, 0.25);
+  color: #2a0015;
+}
+body.light-mode .form-control::placeholder { color: #c090a8; }
+body.light-mode .form-label { color: #9a4060; }
+
+body.light-mode h2 { color: #2a0015; }
+
+body.light-mode .cast-pill {
+  background: #ffe0ee;
+  border-color: rgba(201, 48, 120, 0.2);
+  color: #9a4060;
+}
+
+body.light-mode .summary-body p { color: #5a3045; }
+body.light-mode .summary-body h4 { color: #c93078; }
     .navbar {
       background: rgba(13, 0, 8, 0.96) !important;
       border-bottom: 1px solid var(--border);
@@ -256,6 +331,7 @@
             <button type="submit">Search</button>
           </form>
           <a href="/new" class="btn-add">+ ADD MOVIE</a>
+          <button id="themeToggle" class="btn-nav" style="font-size:16px; padding: 7px 12px;">☀️</button>
         </div>
       </div>
     </div>

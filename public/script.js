@@ -1,10 +1,8 @@
-const dbtn = document.getElementById("themeToggle");
+const btn = document.getElementById("themeToggle");
+btn.textContent = "☀️";
 
-if (dbtn) {
-  dbtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    dbtn.textContent =
-      document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-  });
-}
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+  const isLight = document.body.classList.contains("light-mode");
+  btn.textContent = isLight ? "🌙" : "☀️";
+});
