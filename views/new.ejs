@@ -1,0 +1,22 @@
+<%- include('./header.ejs') -%>
+<h2>ADD NEW MOVIE</h2>
+<form action="/create" method="POST">
+  <div class="mb-3">
+    <label class="form-label">Movie Name</label>
+    <input type="text" name="name" class="form-control" placeholder="e.g. Interstellar">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Year</label>
+    <input type="number" name="year" class="form-control" placeholder="e.g. 2014">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Poster Image URL</label>
+    <input type="text" name="img" class="form-control" placeholder="https://...">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="desc" rows="3" class="form-control" placeholder="Brief synopsis..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Add Movie</button>
+</form>
+<%- include('./footer.ejs') -%>

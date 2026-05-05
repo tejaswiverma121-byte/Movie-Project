@@ -1,0 +1,20 @@
+<%- include('./header.ejs') %>
+<p class="section-title">TOP <span>TRENDING</span></p>
+<div class="movies-grid">
+  <% for(let movie of top){ %>
+  <div class="movie-card">
+    <img src="<%=movie.img%>" class="poster" alt="<%=movie.name%>">
+    <% if(movie.avgRating > 0){ %>
+    <div class="rating-badge">★ <%=movie.avgRating%></div>
+    <% } %>
+    <div class="card-overlay">
+      <a href="/movies/<%=movie._id%>" class="overlay-btn">View Movie</a>
+    </div>
+    <div class="card-info">
+      <div class="card-title"><%=movie.name%></div>
+      <div class="card-meta"><span class="card-year"><%=movie.year%></span></div>
+    </div>
+  </div>
+  <% } %>
+</div>
+<%- include('./footer.ejs') %>

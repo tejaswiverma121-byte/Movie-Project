@@ -1,0 +1,25 @@
+<%- include('./header.ejs') -%>
+<p class="section-title">MY <span>FAVORITES</span></p>
+<div class="movies-grid">
+  <% for(let movie of favMovies){ %>
+  <div class="movie-card">
+    <img src="<%=movie.img%>" class="poster" alt="<%=movie.name%>">
+    <% if(movie.avgRating > 0){ %>
+    <div class="rating-badge">★ <%=movie.avgRating%></div>
+    <% } %>
+    <form action="/favorite/<%=movie._id%>" method="POST" class="bare">
+      <button class="fav-badge" style="color:#c93078;">♥</button>
+    </form>
+    <div class="card-overlay">
+      <a href="/movies/<%=movie._id%>" class="overlay-btn">View Movie</a>
+    </div>
+    <div class="card-info">
+      <div class="card-title"><%=movie.name%></div>
+      <div class="card-meta">
+        <span class="card-year"><%=movie.year%></span>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+<%- include('./footer.ejs') -%>

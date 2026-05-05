@@ -1,0 +1,17 @@
+<%- include('./header.ejs') -%>
+<div class="summary-card">
+  <img src="<%=m.img%>" alt="<%=m.name%>">
+  <div class="summary-body">
+    <h4>AI Summary</h4>
+    <h2 style="text-align:left;font-size:24px;margin-bottom:6px;"><%=data.title%></h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:16px;"><%=m.year%></p>
+    <p><%=data.summary%></p>
+    <h4 class="mt-4 mb-2">Cast</h4>
+    <div>
+      <% for(let s of data.cast){ %>
+      <span class="cast-pill"><%=s%></span>
+      <% } %>
+    </div>
+  </div>
+</div>
+<%- include('./footer.ejs') -%>
